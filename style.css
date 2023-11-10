@@ -1,0 +1,167 @@
+*{
+    scroll-behavior: smooth;
+}
+
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu {
+    position: absolute;
+    margin-left: right;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: right;
+    background: #000;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    text-align: center;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #00abf0;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+p {
+    font-size: 140%;
+    line-height: 150%;
+    text-align: justify;
+    color: #333;
+}
+
+.slide {
+    position: relative;
+    padding: 25vh 10%;
+    min-height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    box-shadow: 0 -1px 10px rgba(0, 0, .7);
+    transform-style: inherit;
+}
+
+.slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 8px 1px rgba(0, 0, .7);
+}
+
+.title {
+    width: 50%;
+    padding: 5%;
+    border-radius: 5px;
+    background: rgba(240, 230, 220, .7);
+    box-shadow: 0 0 8px rgba(0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.slide .slide::before {
+    background: 50% 50% / cover;
+}
+
+.header {
+    text-align: center;
+    font-size: 125%;
+    color: white;
+    text-shadow: 0 2px 2px #000;
+}
+
+#title {
+    background-image: url("imagens/teste_flavio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+#title h1 {
+    transform: translateZ(.25px) scale(.75);
+    transform-origin: 50% 100%;
+}
+
+#slide1::before {
+    background-image: url("imagens/flavio1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+    background-image: url("imagens/infancia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+#slide3::before {
+    background-image: url("imagens/flavio3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+    background-image: url("imagens/flavio2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+
+#slide5::before {
+    background-image: url("imagens/flavio4.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2);
+}
+
+#slide6 {
+    background: #000;
+}
+
+.voltar a {
+    display: none;
+    position: sticky;
+  }
